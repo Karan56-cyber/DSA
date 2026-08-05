@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+        if(s.size()!=t.size()){
+            return false;
+        }
         unordered_map<int,int>mp;
         for(int i=0;i<s.size();i++){
             if(mp.find(s[i])!=mp.end()){
